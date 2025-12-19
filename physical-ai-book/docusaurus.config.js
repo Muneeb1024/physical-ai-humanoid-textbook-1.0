@@ -10,7 +10,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Humanoid & Robotic Book',
+  title: 'Physical  AI & Robotic Book',
   tagline: 'An educational resource for robotics learning with AI integration',
   favicon: 'img/robotics-favicon.ico',
 
@@ -20,15 +20,15 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://your-username.github.io',
+  url: 'https://github.com/Muneeb1024/physical-ai-humanoid-textbook-1.0',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'your-github-username', // Usually your GitHub org/user name.
-  projectName: 'your-repo-name', // Usually your repo name.
+  organizationName: 'Muneeb1024', // Usually your GitHub org/user name.
+  projectName: 'physical-ai-humanoid-textbook-1.0', // Usually your repo name.
 
   onBrokenLinks: 'throw',
 
@@ -48,7 +48,7 @@ const config = {
         docs: {
           sidebarPath: './sidebars.js',
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/your-username/your-repo-name/edit/main/physical-ai-book/',
+          editUrl: 'https://github.com/Muneeb1024/physical-ai-humanoid-textbook-1.0/tree/main/physical-ai-book/',
         },
         blog: {
           showReadingTime: true,
@@ -57,7 +57,7 @@ const config = {
             xslt: true,
           },
           // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/your-username/your-repo-name/edit/main/physical-ai-book/',
+          editUrl: 'https://github.com/Muneeb1024/physical-ai-humanoid-textbook-1.0/tree/main/physical-ai-book',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -80,9 +80,9 @@ const config = {
       },
       // Modern technology-themed color scheme: tech blues, robot grays, AI purples, accent greens/oranges
       navbar: {
-        title: 'Humanoid & Robotic Book',
+        title: 'Physical  AI & Robotic Book',
         logo: {
-          alt: 'Humanoid & Robotic Book Logo',
+          alt: 'Physical  AI & Robotic Book',
           src: 'img/logo.svg',
         },
         items: [
@@ -119,7 +119,7 @@ const config = {
             position: 'left',
           },
           {
-            href: 'https://github.com/your-username/your-repo-name',
+            href: 'https://github.com/Muneeb1024/physical-ai-humanoid-textbook-1.0',
             label: 'GitHub',
             position: 'right',
           },
@@ -183,7 +183,7 @@ const config = {
               },
               {
                 label: 'GitHub Discussions',
-                href: 'https://github.com/your-username/your-repo-name/discussions',
+                href: 'https://github.com/Muneeb1024/physical-ai-humanoid-textbook-1.0/discussions',
               },
               {
                 label: 'Stack Overflow',
