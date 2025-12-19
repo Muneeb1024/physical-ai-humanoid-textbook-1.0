@@ -1,0 +1,740 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  /* Professional technology-themed color palette: tech blues, robot grays, AI purples, accent greens/oranges */
+  --ifm-color-primary: #2563eb;          /* Tech Blue */
+  --ifm-color-primary-dark: #1d4ed8;     /* Darker Tech Blue */
+  --ifm-color-primary-darker: #1e40af;   /* Even Darker Tech Blue */
+  --ifm-color-primary-darkest: #1e3a8a;  /* Darkest Tech Blue */
+  --ifm-color-primary-light: #3b82f6;    /* Lighter Tech Blue */
+  --ifm-color-primary-lighter: #60a5fa;  /* Even Lighter Tech Blue */
+  --ifm-color-primary-lightest: #93c5fd; /* Lightest Tech Blue */
+
+  --ifm-color-secondary: #4b5563;        /* Robot Gray */
+  --ifm-color-secondary-dark: #374151;   /* Darker Robot Gray */
+  --ifm-color-secondary-darker: #1f2937; /* Even Darker Robot Gray */
+  --ifm-color-secondary-darkest: #111827; /* Darkest Robot Gray */
+  --ifm-color-secondary-light: #6b7280;  /* Light Robot Gray */
+  --ifm-color-secondary-lighter: #9ca3af; /* Lighter Robot Gray */
+  --ifm-color-secondary-lightest: #d1d5db; /* Lightest Robot Gray */
+
+  --ifm-color-tertiary: #8b5cf6;         /* AI Purple */
+  --ifm-color-tertiary-dark: #7c3aed;    /* Darker AI Purple */
+  --ifm-color-tertiary-darker: #6d28d9;  /* Even Darker AI Purple */
+  --ifm-color-tertiary-light: #a78bfa;   /* Light AI Purple */
+  --ifm-color-tertiary-lighter: #c4b5fd; /* Lighter AI Purple */
+
+  --ifm-color-accent: #f59e0b;          /* Accent Orange */
+  --ifm-color-accent-dark: #d97706;     /* Darker Accent Orange */
+  --ifm-color-accent-light: #fbbf24;    /* Light Accent Orange */
+
+  --ifm-color-success: #10b981;         /* Success Green */
+  --ifm-color-success-dark: #059669;    /* Darker Success Green */
+  --ifm-color-success-light: #34d399;   /* Light Success Green */
+
+  --ifm-background-color: #f9fafb;       /* Light Gray Background */
+  --ifm-background-surface-color: #ffffff; /* White Surface */
+  --ifm-background-surface-color-dark: #1f2937; /* Dark Surface */
+
+  /* Typography improvements */
+  --ifm-font-family-base: 'Inter', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  --ifm-font-size-base: 16px;
+  --ifm-line-height-base: 1.6;
+  --ifm-heading-font-weight: 600;
+  --ifm-heading-line-height: 1.2;
+
+  --ifm-code-font-size: 90%;
+  --docusaurus-highlighted-code-line-bg: rgba(37, 99, 235, 0.1); /* Tech Blue highlight */
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #60a5fa;          /* Light Tech Blue */
+  --ifm-color-primary-dark: #3b82f6;     /* Tech Blue */
+  --ifm-color-primary-darker: #2563eb;   /* Darker Tech Blue */
+  --ifm-color-primary-darkest: #1d4ed8;  /* Darkest Tech Blue */
+  --ifm-color-primary-light: #93c5fd;    /* Lighter Tech Blue */
+  --ifm-color-primary-lighter: #bfdbfe;  /* Even Lighter Tech Blue */
+  --ifm-color-primary-lightest: #dbeafe; /* Lightest Tech Blue */
+
+  --ifm-color-secondary: #9ca3af;        /* Light Robot Gray */
+  --ifm-color-secondary-dark: #6b7280;   /* Robot Gray */
+  --ifm-color-secondary-darker: #4b5563; /* Darker Robot Gray */
+  --ifm-color-secondary-darkest: #374151; /* Darkest Robot Gray */
+  --ifm-color-secondary-light: #d1d5db;  /* Lighter Robot Gray */
+  --ifm-color-secondary-lighter: #e5e7eb; /* Even Lighter Robot Gray */
+  --ifm-color-secondary-lightest: #f3f4f6; /* Lightest Robot Gray */
+
+  --ifm-color-tertiary: #c4b5fd;         /* Light AI Purple */
+  --ifm-color-tertiary-dark: #a78bfa;    /* AI Purple */
+  --ifm-color-tertiary-darker: #8b5cf6;  /* Darker AI Purple */
+  --ifm-color-tertiary-light: #ddd6fe;   /* Lighter AI Purple */
+  --ifm-color-tertiary-lighter: #ede9fe; /* Even Lighter AI Purple */
+
+  --ifm-color-accent: #fbbf24;          /* Light Accent Orange */
+  --ifm-color-accent-dark: #f59e0b;     /* Accent Orange */
+  --ifm-color-accent-light: #fcd34d;    /* Lighter Accent Orange */
+
+  --ifm-color-success: #34d399;         /* Light Success Green */
+  --ifm-color-success-dark: #10b981;    /* Success Green */
+  --ifm-color-success-light: #6ee7b7;   /* Lighter Success Green */
+
+  --ifm-background-color: #111827;       /* Dark Background */
+  --ifm-background-surface-color: #1f2937; /* Dark Surface */
+  --ifm-background-surface-color-dark: #374151; /* Darker Surface */
+
+  --docusaurus-highlighted-code-line-bg: rgba(96, 165, 250, 0.2); /* Tech Blue highlight */
+}
+
+/* Additional custom styles for the technology-themed design */
+.hero--primary {
+  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-tertiary) 100%);
+  color: white;
+}
+
+.button--primary {
+  background-color: var(--ifm-color-primary); /* Tech blue button */
+  border-color: var(--ifm-color-primary);
+  color: white;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button--primary:hover {
+  background-color: var(--ifm-color-primary-dark); /* Darker blue on hover */
+  border-color: var(--ifm-color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.navbar {
+  background-color: var(--ifm-background-surface-color); /* Light background for navbar */
+  border-bottom: 1px solid var(--ifm-color-secondary-light); /* Gray border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.navbar__title {
+  font-weight: 700;
+  color: var(--ifm-color-primary);
+}
+
+.menu__list-item-collapsible:hover,
+.menu__link:hover {
+  background-color: rgba(37, 99, 235, 0.1); /* Tech blue hover effect */
+  color: var(--ifm-color-primary);
+}
+
+.table-of-contents__link:hover,
+.table-of-contents__link--active {
+  color: var(--ifm-color-primary); /* Tech blue TOC links */
+  border-left: 3px solid var(--ifm-color-primary);
+  font-weight: 500;
+}
+
+/* Improved typography */
+.markdown h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.markdown h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-primary);
+}
+
+.markdown h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--ifm-color-tertiary);
+}
+
+.markdown p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: var(--ifm-font-color-base);
+}
+
+/* Custom styles for code blocks */
+.prism-code {
+  border-radius: 12px;
+  background-color: var(--ifm-background-surface-color-dark) !important;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom styles for cards and containers */
+.card {
+  background-color: var(--ifm-background-surface-color); /* Light background for cards */
+  border: 1px solid var(--ifm-color-secondary-lighter);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+/* Footer styling */
+.footer {
+  background-color: var(--ifm-background-surface-color-dark); /* Dark footer */
+  border-top: 1px solid var(--ifm-color-secondary-darkest);
+  color: var(--ifm-color-secondary-lighter);
+}
+
+.footer__title {
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+.footer__link-item {
+  color: var(--ifm-color-secondary-lighter);
+  transition: color 0.3s ease;
+}
+
+.footer__link-item:hover {
+  color: var(--ifm-color-primary);
+}
+
+/* Improved layout and spacing */
+.container {
+  padding: 0 1.5rem;
+}
+
+.row {
+  margin: 0 -1rem;
+}
+
+.col {
+  padding: 0 1rem;
+}
+
+/* Feature section styling */
+.features {
+  padding: 4rem 0;
+  background: linear-gradient(to bottom, var(--ifm-background-color) 0%, var(--ifm-background-surface-color) 100%);
+}
+
+.features h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--ifm-color-primary);
+  font-size: 2.5rem;
+}
+
+/* Button variants */
+.button--secondary {
+  background-color: var(--ifm-color-secondary);
+  border-color: var(--ifm-color-secondary);
+  color: white;
+}
+
+.button--secondary:hover {
+  background-color: var(--ifm-color-secondary-dark);
+  border-color: var(--ifm-color-secondary-dark);
+}
+
+.button--accent {
+  background-color: var(--ifm-color-accent);
+  border-color: var(--ifm-color-accent);
+  color: white;
+}
+
+.button--accent:hover {
+  background-color: var(--ifm-color-accent-dark);
+  border-color: var(--ifm-color-accent-dark);
+}
+
+/* Improved table styling */
+.markdown table {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.markdown table th {
+  background-color: var(--ifm-color-primary);
+  color: white;
+  font-weight: 600;
+}
+
+.markdown table tr:nth-child(even) {
+  background-color: rgba(37, 99, 235, 0.05);
+}
+
+/* Chat Interface Styles */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.chat-container.chat-light-theme {
+  background-color: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-secondary-lighter);
+}
+
+.chat-container.chat-dark-theme {
+  background-color: var(--ifm-background-surface-color-dark);
+  border: 1px solid var(--ifm-color-secondary-darkest);
+}
+
+.chat-header {
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--ifm-color-secondary-lighter);
+}
+
+.chat-header h3 {
+  margin: 0;
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.25rem;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  background-color: rgba(37, 99, 235, 0.1);
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.welcome-message {
+  text-align: center;
+  color: var(--ifm-color-secondary);
+  font-style: italic;
+  margin: auto;
+}
+
+.message {
+  max-width: 80%;
+  padding: 0.75rem 1rem;
+  border-radius: 12px;
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.user-message {
+  align-self: flex-end;
+  background-color: var(--ifm-color-primary);
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.ai-message {
+  align-self: flex-start;
+  background-color: var(--ifm-color-secondary-lighter);
+  color: var(--ifm-font-color-base);
+  border-bottom-left-radius: 4px;
+}
+
+.message-content {
+  line-height: 1.5;
+}
+
+.message-timestamp {
+  font-size: 0.75rem;
+  opacity: 0.7;
+  margin-top: 0.25rem;
+  text-align: right;
+}
+
+.chat-input-area {
+  padding: 1.5rem;
+  border-top: 1px solid var(--ifm-color-secondary-lighter);
+  display: flex;
+  gap: 0.75rem;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--ifm-color-secondary-light);
+  border-radius: 8px;
+  resize: vertical;
+  min-height: 80px;
+  font-family: inherit;
+  background-color: var(--ifm-background-surface-color);
+  color: var(--ifm-font-color-base);
+}
+
+.chat-input:focus {
+  outline: none;
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.send-button {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--ifm-color-primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.send-button:hover:not(:disabled) {
+  background-color: var(--ifm-color-primary-dark);
+}
+
+.send-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Book Page Styles */
+.book-container {
+  display: flex;
+  gap: 2rem;
+  min-height: 600px;
+}
+
+.book-sidebar {
+  flex: 0 0 250px;
+  background-color: var(--ifm-background-surface-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  height: fit-content;
+  align-self: flex-start;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.book-content {
+  flex: 1;
+  background-color: var(--ifm-background-surface-color);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.book-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.book-sidebar li {
+  margin-bottom: 0.5rem;
+}
+
+.book-sidebar a {
+  display: block;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: var(--ifm-font-color-base);
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.book-sidebar a:hover {
+  background-color: rgba(37, 99, 235, 0.1);
+}
+
+.book-sidebar a.active {
+  background-color: var(--ifm-color-primary);
+  color: white;
+}
+
+/* Improved accessibility features */
+:root {
+  --ifm-focus-ring: 2px solid var(--ifm-color-primary);
+}
+
+*:focus-visible {
+  outline: var(--ifm-focus-ring);
+  outline-offset: 2px;
+}
+
+/* Responsive design improvements */
+@media (max-width: 768px) {
+  .book-container {
+    flex-direction: column;
+  }
+
+  .book-sidebar {
+    flex: none;
+    width: 100%;
+  }
+
+  .chat-container {
+    height: 400px;
+  }
+
+  .message {
+    max-width: 90%;
+  }
+}
+
+/* Animation for page transitions with reduced motion support */
+.docusaurus-mt-auto {
+  animation: slideIn 0.5s ease;
+  animation-duration: var(--animation-duration, 0.5s);
+  animation-iteration-count: var(--animation-iteration-count, 1);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* High contrast mode styles */
+[data-high-contrast="true"] {
+  --ifm-color-primary: #0066cc;
+  --ifm-color-primary-dark: #004c99;
+  --ifm-color-secondary: #000000;
+  --ifm-color-secondary-light: #ffffff;
+  --ifm-background-color: #ffffff;
+  --ifm-background-surface-color: #ffffff;
+  --ifm-font-color-base: #000000;
+  --ifm-border-color: #000000;
+}
+
+[data-high-contrast="true"] * {
+  border-color: var(--ifm-border-color) !important;
+  transition: none !important;
+}
+
+/* Font size adjustments */
+[data-font-size="small"] {
+  --ifm-font-size-base: 14px;
+  font-size: 14px;
+}
+
+[data-font-size="large"] {
+  --ifm-font-size-base: 18px;
+  font-size: 18px;
+}
+
+[data-font-size="large"] .markdown h1 {
+  font-size: 2.75rem;
+}
+
+[data-font-size="large"] .markdown h2 {
+  font-size: 2.25rem;
+}
+
+[data-font-size="large"] .markdown h3 {
+  font-size: 1.75rem;
+}
+
+/* Reduced motion styles */
+.reduce-motion *,
+.reduce-motion *:before,
+.reduce-motion *:after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
+
+/* Accessibility utilities */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.accessible-focus {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+/* Skip to content link for keyboard users */
+.skip-nav {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: var(--ifm-color-primary);
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 1000;
+  transition: top 0.3s ease;
+}
+
+.skip-nav:focus {
+  top: 6px;
+}
+
+/* Accessibility settings panel */
+.accessibility-settings {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.accessibility-toggle-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--ifm-color-primary);
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.accessibility-toggle-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.accessibility-panel {
+  background-color: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-secondary-lighter);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  min-width: 250px;
+  position: relative;
+}
+
+.accessibility-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.accessibility-option {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.accessibility-option label {
+  font-weight: 600;
+  color: var(--ifm-font-color-base);
+}
+
+.accessibility-option input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+
+.font-size-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.font-size-display {
+  min-width: 60px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.accessibility-btn {
+  padding: 0.5rem 1rem;
+  background-color: var(--ifm-color-secondary-lighter);
+  color: var(--ifm-font-color-base);
+  border: 1px solid var(--ifm-color-secondary);
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.accessibility-btn:hover:not(:disabled) {
+  background-color: var(--ifm-color-secondary);
+  color: white;
+}
+
+.accessibility-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.accessibility-checkbox {
+  margin-right: 0.5rem;
+}
+
+.close-accessibility-panel {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--ifm-color-secondary);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.close-accessibility-panel:hover {
+  background-color: var(--ifm-color-secondary-lighter);
+}

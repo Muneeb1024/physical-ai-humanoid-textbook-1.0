@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell -ExecutionPolicy Bypass -File \".specify/scripts/powershell/create-new-feature.ps1\" -Json -Number 1 -ShortName \"physical-ai-textbook\" -FeatureDescription \"Create comprehensive specifications for our Physical AI & Humanoid Robotics textbook project that follows the principles established in our constitution. Detail: 1. BOOK STRUCTURE: Complete chapter breakdown following the 13-week course curriculum \\(Modules 1-4: ROS 2, Gazebo, NVIDIA Isaac, VLA\\) 2. CORE CONTENT SPECIFICATIONS: Detailed learning objectives, key concepts, exercises, and assessments for each module 3. TECHNICAL REQUIREMENTS: Specifications for Docusaurus implementation, navigation, search, and responsive design 4. RAG CHATBOT SPECIFICATIONS: Detailed functionality, integration points, question types, and response mechanisms 5. PERSONALIZATION FEATURES: How content adapts based on user background \\(software/hardware expertise\\) 6. TRANSLATION CAPABILITIES: Urdu localization system with toggle functionality 7. AUTHENTICATION SYSTEM: User signup/login with background assessment questionnaire\")",
+      "Bash(powershell -ExecutionPolicy Bypass -File \".specify/scripts/powershell/check-prerequisites.ps1\" -Json)",
+      "Bash(powershell -ExecutionPolicy Bypass -File \".specify/scripts/powershell/check-prerequisites.ps1\" -Json -RequireTasks -IncludeTasks)",
+      "Bash(dir \"D:\\\\GIAIC\\\\QUARTER-4\\\\AI-FIRST-SPEC-DRIVEN-DEVELPMENT\\\\AI-DRIVEN-HACKATHON\\\\physical-ai-humanoid-robotics-hackathon-1\\\\specs\\\\001-physical-ai-textbook\\\\checklists\")",
+      "Bash(git rev-parse --git-dir)",
+      "Bash(dir)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:nadeemsangrasi.github.io)",
+      "Bash(./node_modules/.bin/tailwindcss init -p)",
+      "Bash(npm install --save-dev @tailwindcss/postcss)"
+    ]
+  }
+}
